@@ -54,9 +54,15 @@ def check_default(computer,player):
 
 
 def compare(computer,player):
+    
+    if status==DEFAULT_OPTIONS:
+        check_player = check_default
+    else:
+        check_player=check
+
     if player==computer:
         return ("Draw",computer)
-    elif check(computer,player):
+    elif check_player(computer,player):
           return ("Lose",computer)
     else:
         return ("Win",computer)
