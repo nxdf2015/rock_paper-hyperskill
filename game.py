@@ -52,6 +52,7 @@ def check_default(computer,player):
     """
     return (id_status(player) + 1) % 3 == id_status(computer)
 
+
 def compare(computer,player):
     if player==computer:
         return ("Draw",computer)
@@ -103,6 +104,8 @@ def find_player(name_player):
              return int(score)
      else:
          return 0
+
+
 def get_options():
     options=input()
     if options=="":
